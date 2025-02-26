@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: bisque;
+}
+
+.div-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+}
+
+.div-titulo h1 {
+    font-weight: 300px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+.container .div-formulario {
+    width: 30%;
+    height: 250px;
+    margin: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(123, 132, 132 );
+}
+
+.container .div-formulario h2 {
+    margin-top: 10px;
+    font-weight: 300;
+    font-weight: 2em;
+    color: #fff;
+}
+
+.container .div-formulario form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .div-formulario form input, 
+.container .div-formulario form button {
+    width: 60%;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+
+/* ESTILO DE LISTADO */
+
+.container .div-listado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    height: calc(100% - 50px);
+    margin: 15px 15px;
+    background-color: rgb(135, 132, 132);
+    box-shadow: 10xp 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.container .div-listado h2 {
+    margin-top: 10px;
+    font-weight: 300px;
+    font-size: 2em;
+    color: #fff;
+}
+
+.container .div-listado .div-empleados {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    padding: 0 30px;
+}
+
+.container .div-listado .div-empleados p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #ddd;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    margin: 0 5px;
+    color: #fff;
+}
+
+.btn-editar {
+    background-color: rgb(44, 173, 72);
+}
+
+.btn-eliminar {
+    background-color: #f00;
+}
