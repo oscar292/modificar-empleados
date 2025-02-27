@@ -27,7 +27,7 @@ function validarFormulario(e){
         editandoEmpleado();
         editando= false;
     }
-    
+
     else {
         objEmpleado.id = Date.now();
         objEmpleado.nombre = nombreInput.value;
@@ -38,7 +38,8 @@ function validarFormulario(e){
 
 function agregarEmpleado() {
     listaEmpleados.push({...objEmpleado});
-    mostrarEmpleados();
+    guardarLocalStorage(listaEmpleados);
+    obtenerLocalStorage();
     formulario.reset();
     limpiaObjecto();
 }
@@ -86,7 +87,6 @@ function mostrarEmpleados() {
 function cargarEmpleado(empleado){
 
     const {id,nombre,puesto}= empleado;
-
     nombreInput.value = nombre;
     puestoInput.value = puesto;
     objEmpleado.id = id;
@@ -132,3 +132,14 @@ function limpiarHTML() {
         divEmpleados.removeChild(divEmpleados.firstChild);
     }
 }
+
+function guardarLocalStorage(listaEmpleados){
+    localStorage.setItem('empleados',JSON.stringify(listaEmpleados));
+}
+
+function obtenerLocalStorage(){
+    listaEmpleados = JSON.parse(localStorage.getItem('empleados'));
+    mostrarEmpleados();
+}
+
+obtenerLocalStorage();
